@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Precificação - Extensão</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/css/adminlte.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/js/adminlte.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Estilize o popup */
+        .popup-content {
+            width: 400px; /* Ajuste a largura conforme necessário */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card popup-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Calculadora de Precificação</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="pricingCalculator">
+                            <div class="form-group">
+                                <label for="costOfProduct">Custo do Produto:</label>
+                                <input type="number" class="form-control" id="costOfProduct" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for "adCosts">Custos de Anúncios (CPA):</label>
+                                <input type="number" class="form-control" id="adCosts" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="shippingCosts">Custos de Frete:</label>
+                                <input type="number" class="form-control" id="shippingCosts" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="desiredMargin">Margem de Lucro Desejada (%):</label>
+                                <input type="number" class="form-control" id="desiredMargin" required>
+                            </div>
+
+                            <button type="button" class="btn btn-primary" id="calculateButton">Calcular</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card popup-content">
+                    <div class="card-header">
+                        <h4 class="card-title">Valor de Venda Sugerido</h4>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Preço de Venda Recomendado:</strong> <span id="price">0.00</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adicione o script externo no final do arquivo -->
+    <script src="popup.js"></script>
+</body>
+</html>
